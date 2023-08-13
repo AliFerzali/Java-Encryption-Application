@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7AA4A8"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tV1"
+        android:layout_width="356dp"
+        android:layout_height="218dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="25dp"
+        android:background="#A8BDD1"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="Status"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/inputMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV2" />
+
+
+    <TextView
+        android:id="@+id/tV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="36dp"
+        android:text="Kryptering Applikation"
+        android:textColor="#070000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tV1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btndecrypt"
+        android:layout_width="165dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="90dp"
+        android:background="@color/black"
+        android:text="Dekryptera"
+        android:textColor="#421414"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#A8BDD1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnencrypt"
+        app:layout_constraintTop_toBottomOf="@+id/key_dt" />
+
+    <Button
+        android:id="@+id/btnencrypt"
+        android:layout_width="163dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="#000000"
+        android:text="Kryptera"
+        android:textColor="#390F0F"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#A8BDD1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btndecrypt"
+        app:layout_constraintEnd_toStartOf="@+id/btndecrypt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/inputMessage"
+        android:layout_width="348dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Skriv in texten som ska bli krypterad"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/ciphEdt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV2" />
+
+    <EditText
+        android:id="@+id/ciphEdt"
+        android:layout_width="354dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="17dp"
+        android:hint="Cipher-Text"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/key_dt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputMessage" />
+
+
+    <EditText
+        android:id="@+id/algorithm"
+        android:layout_width="355dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="8dp"
+        android:hint="AES/RSA"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btndecrypt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ciphEdt"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <EditText
+        android:id="@+id/key_dt"
+        android:layout_width="356dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:hint="Nyckel-Längd"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btndecrypt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ciphEdt"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Front-end designen är tagen från:
+    https://www.geeksforgeeks.org/encryption-and-decryption-application-in-android-using-caesar-cipher-algorithm/ -->
