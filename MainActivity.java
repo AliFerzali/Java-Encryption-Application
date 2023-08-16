@@ -142,4 +142,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-// Krpytering appen och koden är skriven av Ali Ferzali för Kursen Tillämpad Programmering på KAU.
+// Krpytering appen och koden är skriven av Ali Ferzali.
